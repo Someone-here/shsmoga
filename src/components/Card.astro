@@ -1,0 +1,65 @@
+---
+import LearnMoreBtn from './LearnMoreBtn.astro';
+import Circle from './Circle.astro';
+---
+<div class="banner d-flex">
+  <div class="left d-flex align-items-center justify-content-center">
+    <div class="content">
+      <div class="stats p-3">
+        <h1 class="display-4 fw-bold text-center">THE QUEST TO EDUCATE AND <br /> LIGHTEN EVERY STUDENT'S LIFE </h1>
+        <LearnMoreBtn>See Here</LearnMoreBtn>
+        <div class="circles justify-content-evenly w-75 d-flex m-5">
+          <Circle>50+</Circle>
+          <Circle>5000+</Circle>
+          <Circle>400+</Circle>
+        </div>
+      </div>
+      <div class="img-right"></div>
+    </div>
+  </div>
+  <div class="right">
+  </div>
+</div>
+
+<style>
+.stats {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+div.img-right {
+  background: url("https://picsum.photos/800/600");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 800px;
+  height: 600px;
+}
+.content {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: whitesmoke;
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner {
+  height: 80vh;
+  width: 100vw;
+  margin-bottom: 10rem;
+}
+.left {
+  background: #597E20;
+  width: 100%;
+}
+.right {
+  background: #fff;
+  width: 15%;
+}
+</style>

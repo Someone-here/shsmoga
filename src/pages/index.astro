@@ -1,0 +1,48 @@
+---
+import Layout from '../components/Layout.astro';
+import Carousel from '../components/Carousel.astro';
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Events from "../components/Events.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Sacred Heart School">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/splide.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Cinzel&display=swap" rel="stylesheet">
+	<header>
+		<Navbar />
+	</header>
+	<main>
+		<section>
+			<Carousel />
+		</section>
+		<section>
+		<Hero />
+		<Events />
+		</section>
+		<section class="slides">
+		<h1 class="card-head display-3">AT A GLANCE</h1>
+		<Card />
+		</section>
+	</main>
+</Layout>
+
+<style>
+* {
+	box-sizing: border-box;
+}
+main {
+	display: grid;
+	place-items: center;
+}
+.card-head {
+	margin: 2.5rem 0rem;
+	text-align: center;
+	font-weight: bold;
+	font-family: 'Barlow Condensed', serif;
+	letter-spacing: 2px;
+	color: var(--bs-green);
+}
+</style>
